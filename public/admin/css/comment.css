@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration: none;
+    color: #222d23;
+}
+input,textarea{
+    -webkit-appearance: none;
+
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.ml_30{
+    margin-left: 30px
+}
+.body_bg{
+    background-color: #222d23;
+}
+.mt_150{
+    margin-top:150px; 
+}
+.panel-title{
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+}
