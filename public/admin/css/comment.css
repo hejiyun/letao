@@ -31,6 +31,9 @@ textarea {
 .body_bg {
   background-color: #222d23;
 }
+.mt_80{
+  margin-top: 80px; 
+}
 .mt_150 {
   margin-top: 150px;
 }
@@ -38,6 +41,9 @@ textarea {
   font-size: 20px;
   height: 40px;
   line-height: 40px;
+}
+.ds-topbar.hidemenu{
+  padding-left:0; 
 }
 .ds-topbar {
   top: 0;
@@ -65,6 +71,9 @@ textarea {
   .ds-topbar a:last-child {
     display: none;
   }
+}
+.ds-cbl.hidemenu{
+  left:-180px;
 }
 .ds-cbl {
   width: 180px;
@@ -123,6 +132,23 @@ textarea {
 }
 .ds-cbl .ds-lb ul li a i {
   margin-right: 5px;
+}
+.child{
+  display: none;
+  width: 100%;
+  height: 80px;
+
+  
+}
+.ml_20{
+  margin-left:20px; 
+}
+.chlid.show{
+  display: block;
+  
+}
+.ds-main.hidemenu{
+  padding-left:0; 
 }
 .ds-main {
   width: 100%;

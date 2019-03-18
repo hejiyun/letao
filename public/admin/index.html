@@ -20,13 +20,13 @@
         <ul>
             <li><a href=""><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
             <li>
-                <a href=""><i class="glyphicon glyphicon-list"></i>分类管理</a>
-                <!-- <ul>
-                        <li><a href="#">一级列表</a></li>
-                        <li><a href="#">二级列表</a></li>
-                    </ul> -->
+                <a href="" class="category"><i class="glyphicon glyphicon-list"></i>分类管理</a>
+                <div class="child">
+                    <a href="#" class="ml_20">一级列表</a>
+                    <a href="#" class="ml_20">二级列表</a>
+              </div>
             </li>
-            <li><a href=""><i class="glyphicon glyphicon-tags"></i>商品管理</a></li>
+            <li><a href="" ><i class="glyphicon glyphicon-tags"></i>商品管理</a></li>
         </ul>
       </div>
     </div>
@@ -35,7 +35,7 @@
     <div class="ds-main">
         <div class="ds-topbar">
             <a href="" class="pull-left icon_menu"><i class="glyphicon glyphicon-align-justify"></i></a>
-            <a href="" class="pull-right icon_logout "><i class="glyphicon glyphicon-log-out"></i></a>
+            <a href="#" class="pull-right icon_logout " ><i class="glyphicon glyphicon-log-out"></i></a>
         </div>
         <div class="change">
             <ol class="dh">
@@ -51,9 +51,30 @@
     </div>
 
     <!-- 模态框 -->
+    <div class="modal fade" id="logoutModal">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                  <p class="red"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
+                </div>
+              </div>
+            </div>
+          </div>
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/echarts/echarts.min.js"></script>
-<script src='js/index.js'></script>
+<script src="js/index.js"></script>
+<script>
+
+
+</script>
 </body>
 </html>
