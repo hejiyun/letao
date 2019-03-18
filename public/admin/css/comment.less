@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+  }
+ul, ol{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration-line: none;
+}
+input,textarea{
+    -webkit-appearance: none;
+
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.ml_30{
+    margin-left: 30px
+}
+.body_bg{
+    background-color: #222d23;
+}
+.mt_150{
+    margin-top:150px; 
+}
+.panel-title{
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.ds-topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    padding-left:180px;
+    background-color: #3C8DBC;
+    opacity: 0.8;
+    z-index: 666;
+    a{
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-align: center;
+        i{
+            font-size: 16px;
+            line-height: 50px;
+            color: white
+        }
+    }
+}
+@media screen and(max-width:280px) {
+    .ds-topbar{
+        a:last-child{
+            display: none;
+        }
+    }
+}
+.ds-cbl{
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 999;
+    background-color: #222D32;
+    color: white;
+    .ds-logo{
+        font-size: 24px;
+        width: 180px;
+        height: 50px;
+        background-color: #3C8DBC;
+        text-align: center;
+        line-height: 50px;
+    }
+    .gly{
+        width: 180px;
+        height: 180px;
+        text-align: center;
+        padding-top:30px;
+        padding-bottom:20px  ;
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+        span{
+            
+            font-size: 18px;
+            line-height: 40px;
+
+        }
+    }
+    .ds-lb{
+        width: 180px;
+        height: 130px;
+        color: white;
+        ul{
+            width: 100%;
+            li{
+                height: 40px;
+                text-align: center;
+                a{
+                    margin-right:19px; 
+                    display: block;
+                    line-height: 40px;
+                    font-size: 14px;
+                    color: white;
+                    i{
+                        margin-right:5px; 
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
+.ds-main{
+    width: 100%;
+    height: 100%;
+    padding-left: 180px;
+    padding-top:50px; 
+    .change{
+        padding: 0 15px;
+        margin: 0 auto;
+        .dh {
+            height: 40px;
+            margin: 20px 10px;
+            background-color: #f5f5f5;
+            li{
+                float: left;
+                height: 20px;
+                line-height: 40px;
+                margin-left: 5px; 
+                a{
+                    color: #222D32
+                }
+            }
+            li:first-child{
+                a{
+                    color: blue;
+                }   
+            }
+        }
+    }
+ 
+
+}
+.echarts_1,
+.echarts_2 {
+  width: 48%;
+  height: 400px;
+  margin-top:10px; 
+}

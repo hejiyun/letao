@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>电商首页</title>
 </head>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="css/comment.css">
 <body>
-    <h1>首页</h1>
+  
+    <div class="ds-cbl">
+        <div class="ds-logo">黑马36期</div>
+      <div class="gly">
+          <img src="images/default.png" alt="">
+          <span>超级管理员</span>
+      </div>
+      <div class="ds-lb">
+        <ul>
+            <li><a href=""><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+            <li>
+                <a href=""><i class="glyphicon glyphicon-list"></i>分类管理</a>
+                <!-- <ul>
+                        <li><a href="#">一级列表</a></li>
+                        <li><a href="#">二级列表</a></li>
+                    </ul> -->
+            </li>
+            <li><a href=""><i class="glyphicon glyphicon-tags"></i>商品管理</a></li>
+        </ul>
+      </div>
+    </div>
+    
+     <!-- <主体> -->
+    <div class="ds-main">
+        <div class="ds-topbar">
+            <a href="" class="pull-left icon_menu"><i class="glyphicon glyphicon-align-justify"></i></a>
+            <a href="" class="pull-right icon_logout "><i class="glyphicon glyphicon-log-out"></i></a>
+        </div>
+        <div class="change">
+            <ol class="dh">
+                <li><a href="">管理系统</a></li>
+                <li><a href="">首页</a></li>
+            </ol>
+            <div class="echarts">
+                <div class="echarts_1 pull-left"></div>
+                <div class="echarts_2 pull-right"></div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- 模态框 -->
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/echarts/echarts.min.js"></script>
+<script src='js/index.js'></script>
 </body>
 </html>
