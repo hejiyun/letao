@@ -7,6 +7,7 @@
     <title>电商首页</title>
 </head>
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
 <link rel="stylesheet" href="css/comment.css">
 <body>
   
@@ -44,8 +45,45 @@
                 <li><a href=""> 一级分类</a></li>
             </ol>
         </div>
-
+         
         <!-- 添加内容 -->
+             <!-- 添加内容 -->
+             <!-- Button trigger modal -->
+      
+      <button type="button" class="btn btn-default ml_25" data-toggle="modal" data-target=".bs-example-modal-sm">添加分类</button>
+
+<div class="modal fade bs-example-modal-sm" >
+  <div class="modal-dialog modal-sm" >
+    <div class="modal-content">
+            <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" ><span>&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+                  </div>
+                  <div class="modal-body">
+                    <input type="text" class="incate" placeholder="请输入一级分类">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">添加</button>
+                  </div>
+    </div>
+  </div>
+</div>
+             <table class="table table-hover table-bordered mt_20">
+                    <thead>
+                        <tr>
+                            <th width="20%">序号</th>
+                            <th width="80%">一级分类名</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                    
+                   </tbody>
+              </table>
+              <div class="text-right">
+                    <ul id="paginator"></ul>
+                  </div>
+            
     
     </div>
 
@@ -67,8 +105,22 @@
               </div>
             </div>
           </div>
+
+<script type="text/html" id="userTpl">
+    {{ each rows v i }}
+        <tr>
+                <!-- 前面有多少页*一页多少条 + (i+1) -->
+         <td>{{ (page-1)*size + i+1 }}</td>
+         <td>{{ v.categoryName }}</td>
+         </tr>
+    {{ /each }}
+</script>
+          
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js/comment.js"></script>
 <script src="js/first.js"></script>
 <script>

@@ -199,3 +199,18 @@ textarea {
 .text-right {
   margin-right: 25px;
 }
+.ml_25{
+  margin-left:25px; 
+}
+.mt_20{
+  margin-top: 20px;
+}
+.incate{
+  width: 97%;
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px auto;
+  margin-top:0;
+  -webkit-appearance: none;
+  text-shadow: none; 
+}
