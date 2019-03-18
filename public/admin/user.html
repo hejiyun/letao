@@ -43,8 +43,37 @@
                 <li><a href=""> 用户管理 </a></li>
             </ol>
         </div>
-    
+         
            <!-- 添加内容 -->
+           <table class="table table-hover table-bordered">
+                <thead>
+                        <tr>
+                                <th width="10%">序号</th>
+                                <th width="20%">用户名</th>
+                                <th width="30%">手机号</th>
+                                <th width="20%">状态</th>
+                                <th width="20%">操作</th>
+                           </tr>
+
+                </thead>
+               <tbody>
+                
+                   <!-- {{each users}} -->
+                   <!-- <tr>
+                    <td>{{ v.index +1}}</td>
+                    <td>{{v.username}}</td>
+                    <td>{{v.phone}}</td>
+                    <td>{{v.status}}</td>
+                    <td>{{v.oprate}}</td>
+                   </tr> -->
+                   <!-- 动态渲染数据 -->
+                   <!-- {{/each}} -->
+               </tbody>
+          </table>
+          <div class="text-right">
+                <ul id="paginator"></ul>
+              </div>
+        
     </div>
 
     <!-- 模态框 -->
@@ -65,8 +94,27 @@
               </div>
             </div>
           </div>
+<script type="text/html" id="tpl">
+     {{ each rows v i }}
+        <tr>
+            <td>{{ (page-1)*size + i+1 }}</td>
+            <td>{{ v.username }}</td>
+            <td>{{ v.mobile }}</td>
+            <td>{{ v.isDelete === 1 ? "正常" : "禁用" }}</td>
+            <td data-id="{{ v.id }}">
+            {{ if v.isDelete === 1 }}
+                <button class="btn btn-danger">禁用</button>
+                    {{ else }}
+                      <button class="btn btn-success">启用</button>
+                    {{ /if }}
+            </td>
+        </tr>
+    {{ /each }}
+</script>
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js/comment.js"></script>
 <script src="js/user.js"></script>
 <script>

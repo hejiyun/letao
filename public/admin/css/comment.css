@@ -31,8 +31,8 @@ textarea {
 .body_bg {
   background-color: #222d23;
 }
-.mt_80{
-  margin-top: 80px; 
+.mt_80 {
+  margin-top: 80px;
 }
 .mt_150 {
   margin-top: 150px;
@@ -42,8 +42,8 @@ textarea {
   height: 40px;
   line-height: 40px;
 }
-.ds-topbar.hidemenu{
-  padding-left:0; 
+.ds-topbar.hidemenu {
+  padding-left: 0;
 }
 .ds-topbar {
   top: 0;
@@ -72,8 +72,8 @@ textarea {
     display: none;
   }
 }
-.ds-cbl.hidemenu{
-  left:-180px;
+.ds-cbl.hidemenu {
+  left: -180px;
 }
 .ds-cbl {
   width: 180px;
@@ -133,27 +133,26 @@ textarea {
 .ds-cbl .ds-lb ul li a i {
   margin-right: 5px;
 }
-.child{
+.child {
   display: none;
   width: 100%;
   height: 80px;
 }
-.child.xs{
-  display: block
+.child.xs {
+  display: block;
 }
-.current{
+.current {
   background-color: #1D1F21;
   border-left: 3px solid #006699;
 }
-.ml_20{
-  margin-left:20px; 
+.ml_20 {
+  margin-left: 20px;
 }
-.chlid.show{
+.chlid.show {
   display: block;
-  
 }
-.ds-main.hidemenu{
-  padding-left:0; 
+.ds-main.hidemenu {
+  padding-left: 0;
 }
 .ds-main {
   width: 100%;
@@ -187,4 +186,16 @@ textarea {
   width: 48%;
   height: 400px;
   margin-top: 10px;
+}
+.table {
+  width: 95%;
+  margin: 0 auto;
+}
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
+}
+.text-right {
+  margin-right: 25px;
 }
