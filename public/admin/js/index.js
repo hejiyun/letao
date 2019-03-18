@@ -86,20 +86,5 @@ $(function() {
     // 使用刚指定的配置项和数据显示图表。
     echars2.setOption(option2);
   })
-  $('.icon_logout').on('click', function() {
-    console.log(this)
-  // 让模态框显示
-  $('#logoutModal').modal("show");
-})
-$('.icon_menu').click(function() {
-  $('.ds-cbl').toggleClass("hidemenu");
-  $('.ds-main').toggleClass("hidemenu");
-  $('.ds-topbar').toggleClass("hidemenu");
-  return false
-});
 
-$('.category').click(function () {
-  $('.ds-lb>ul>li:last-child').toggleClass('mt_80')
-  $('.child').toggleClass('show')
-  return false
-})
+

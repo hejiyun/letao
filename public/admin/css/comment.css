@@ -137,8 +137,13 @@ textarea {
   display: none;
   width: 100%;
   height: 80px;
-
-  
+}
+.child.xs{
+  display: block
+}
+.current{
+  background-color: #1D1F21;
+  border-left: 3px solid #006699;
 }
 .ml_20{
   margin-left:20px; 
