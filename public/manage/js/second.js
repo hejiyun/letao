@@ -64,7 +64,6 @@ $(function() {
   });
 
 
-  // 3. 通过注册委托事件, 给 a 添加点击事件
   $('.dropdown-menu').on("click", "a", function() {
     // 选中的文本
     var txt = $(this).text();
