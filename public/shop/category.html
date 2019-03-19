@@ -29,12 +29,12 @@
         <div class="fl-left">
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                    <ul>
-                        <li><a href="" class="current">运动馆</a></li>
+                    <ul class="changebg">
+                        <!-- <li><a href="" class="current">运动馆</a></li>
                         <li><a href="">女士馆</a></li>
                         <li><a href="">男士馆</a></li>
                         <li><a href="">帆布馆</a></li>
-                        <li><a href="">户外馆</a></li>
+                        <li><a href="">户外馆</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -42,37 +42,8 @@
         <div class="fl-right">
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                   <ul>
-                       <li>
-                           <a href="">
-                               <img src="./images/brand1.png" alt="">
-                               <p>耐克</p>
-                           </a>
-                       </li>
-                       <li>
-                           <a href="">
-                               <img src="./images/brand2.png" alt="">
-                               <p>耐克</p>
-                           </a>
-                       </li>
-                       <li>
-                           <a href="">
-                               <img src="./images/brand3.png" alt="">
-                               <p>耐克</p>
-                           </a>
-                       </li>
-                       <li>
-                           <a href="">
-                               <img src="./images/brand4.png" alt="">
-                               <p>耐克</p>
-                           </a>
-                       </li>
-                       <li>
-                           <a href="">
-                               <img src="./images/brand5.png" alt="">
-                               <p>耐克</p>
-                           </a>
-                       </li>
+                   <ul class="xuanran">
+                      
                    </ul>
                 </div>
             </div>
@@ -113,8 +84,26 @@
     </div>
 </div>
 
+<script type="text/html" id="fl">
+    {{each rows v i}}
+    <li><a href="#" class="{{ i === 0 ? 'current' : '' }}" data-id= {{v.id}}>{{v.categoryName}}</a></li>
+    {{/each}}
+</script>
+<script type="text/html" id="secondfl">
+    {{ if rows.length === 0 }}
+    <p class="tips">没有更多分类信息了</p>
+  {{ /if }}
 
+  {{each rows v i}}
+  <li>
+        <a href="#">
+            <img src="..{{v.brandLogo}}" alt="">
+            <p>{{v.brandName}}</p>
+        </a>
+    </li>
 
+   {{/each}}
+</script>
 
 
 
