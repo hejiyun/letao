@@ -1,0 +1,15 @@
+.ds-nav {
+  padding: 10px;
+  width: 100%;
+}
+.ds-nav ul {
+  width: 100%;
+}
+.ds-nav ul li {
+  width: 33%;
+  float: left;
+}
+.ds-nav ul li img {
+  display: block;
+  width: 100%;
+}
