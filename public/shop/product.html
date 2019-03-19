@@ -26,8 +26,8 @@
 
      <div class="pr-main">
         <div class="mui-scroll-wrapper">
-            <div class="mui-scroll">
-                   <!-- 添加内容 -->
+            <div class="mui-scroll" id="xuanranchange">
+                
             </div>
         </div>
      </div>
@@ -44,7 +44,86 @@
 </div>
 
 
+<script type="text/html" id="xuanran11">
+  
+    <div class="mui-slider">
 
+
+        <div class="mui-slider-group mui-slider-loop">
+      
+          <div class="mui-slider-item mui-slider-item-duplicate">
+            <a href="#"><img src="{{ pic[pic.length-1].picAddr }}" /></a>
+          </div>
+    
+          {{ each pic v i }}
+            <div class="mui-slider-item"><a href="#"><img src="{{ v.picAddr }}" /></a></div>
+          {{ /each }}
+    
+          <div class="mui-slider-item mui-slider-item-duplicate">
+            <a href="#"><img src="{{ pic[0].picAddr }}" /></a>
+          </div>
+        </div>
+
+        <div class="mui-slider-indicator">
+          {{ each pic v i }}
+            <div class="mui-indicator {{ i === 0 ? 'mui-active' : '' }}"></div>
+          {{ /each }}
+        </div>
+    
+      </div>
+    
+ 
+      <div class="lt_pro_name item_box">
+        <strong>{{ proName }}</strong>
+      </div>
+    
+  
+      <div class="lt_price item_box">
+        价格:
+        <span class="price">¥{{ price }}</span>
+        <span class="oldPrice">¥{{ oldPrice }}</span>
+      </div>
+    
+     
+      <div class="lt_size item_box">
+        尺码:
+        <%
+          var arr = size.split("-");  //  ["35", "45"]
+          var start = arr[0];   // 35
+          var end = arr[1];     // 45
+    
+          for ( var i = start; i <= end; i++ ) {
+        %>
+          <span>{{ i }}</span>
+        <% } %>
+      </div>
+    
+    
+
+      <div class="lt_num item_box">
+        数量:
+    
+
+        <div class="mui-numbox" data-numbox-min="1" data-numbox-max="{{ num }}" data-numbox-step='1'>
+  
+          <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+          <input class="mui-numbox-input" type="number" />
+  
+          <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+        </div>
+    
+    
+        <span>剩余数量: {{ num }}双 </span>
+    
+      </div>
+    
+    
+      <!-- 详情描述 -->
+      <div class="lt_price item_box">
+        详情: {{ proDesc }}
+      </div>
+    
+</script>
 
 
 
