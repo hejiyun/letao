@@ -39,4 +39,3 @@ $(function() {
     });
     return obj[name];
   }
-  
