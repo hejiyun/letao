@@ -1,0 +1,58 @@
+.fl-main{
+    width: 100%;
+    height: 100%;
+}
+.fl-main .fl-left{
+    float: left;
+    width: 90px;
+    height: 100%;
+    position: relative;
+    background-color: #fff
+}
+.fl-main .fl-right{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.fl-main .fl-left li a{
+    display: block;
+    width: 90px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    font-size: 17px;
+    background-color: #E3E4E5;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.fl-main .fl-left li a.current{
+    background-color:none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.fl-main .fl-right li{
+    float: left;
+    width: 33%;
+    
+}
+.fl-main .fl-right li a{
+   display: block;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+}
+.fl-main .fl-right li a img{
+    width: 70px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+}
+.fl-main .fl-right li a p{
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #8f8f94;
+}
