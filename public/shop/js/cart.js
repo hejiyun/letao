@@ -1,5 +1,7 @@
 $(function () {
+  function render () {
 
+ 
     $.ajax({
         type:'get',
         url:'/cart/queryCart',
@@ -12,5 +14,21 @@ $(function () {
             var htmlstr = template('gwc',{arr:info})
             $('.mui-table-view').html(htmlstr)
         }
+    })
+    }
+    render()
+
+
+    $('#gwul').on('click', '.btn_delete', function () {
+        var id = $(this).data('id')
+        $.ajax({
+            type:'get',
+            url:'/cart/deleteCart',
+            data:{id:id},
+            dataType:'json',
+            success: function () {
+                render()
+            }
+        })
     })
 })

@@ -1,13 +1,17 @@
 
 $(function () {
+
+   var key = getSearch('proName')
+   $('#searchget').val(key) 
+   var prames = {}
+   prames.proName = $('#searchget').val()
+   prames.page = 1
+   prames.pagesize = 100
+
     $.ajax({
         type:'get',
         url:'/product/queryProduct',
-        data:{
-            proName:'匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮',
-            page: 1,
-            pagesize:10,
-        },
+        data: prames,
         dataType: 'json',
         success: function (info) {
            var htmlstr = template('searchchange',info)
