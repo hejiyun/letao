@@ -40,9 +40,9 @@
         </div>
         <div class="change">
             <ol class="dh">
-                <li><a href="">管理系统</a> / </li>
-                <li><a href=""> 分类管理</a> / </li>
-                <li><a href=""> 一级分类</a></li>
+                <li><a href="javaScript:;">管理系统</a> / </li>
+                <li><a href="javaScript:;"> 分类管理</a> / </li>
+                <li><a href="javaScript:;"> 一级分类</a></li>
             </ol>
         </div>
          
@@ -50,9 +50,9 @@
              <!-- 添加内容 -->
              <!-- Button trigger modal -->
       
-      <button type="button" class="btn btn-default ml_25" data-toggle="modal" data-target=".bs-example-modal-sm">添加分类</button>
+      <button type="button" id="addBtn" class="btn btn-default ml_25" >添加分类</button>
 
-<div class="modal fade bs-example-modal-sm" >
+<div class="modal fade " id="addModal">
   <div class="modal-dialog modal-sm" >
     <div class="modal-content">
             <div class="modal-header">
@@ -60,11 +60,15 @@
                     <h4 class="modal-title" id="myModalLabel">添加分类</h4>
                   </div>
                   <div class="modal-body">
-                    <input type="text" class="incate" placeholder="请输入一级分类">
+                    <form id="form">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入一级分类" name="categoryName">
+                      </div>
+                    </form>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">添加</button>
+                    <button type="submit"   class="btn btn-primary" form="form">添加</button>
                   </div>
     </div>
   </div>

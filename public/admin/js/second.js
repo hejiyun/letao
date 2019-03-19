@@ -38,7 +38,7 @@ $(function() {
       })
     };
     $('#addBtn').click(function() {
-    
+       $('#addModal').modal('show')
         // 请求一级分类名称, 渲染下拉菜单
         $.ajax({
           url: "/category/queryTopCategoryPaging",

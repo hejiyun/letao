@@ -45,31 +45,47 @@ $(function() {
   
     }
   
-  
+    $('#addBtn').on('click', function () {
+    $('#addModal').modal("show");
+  })
 
-  
-    // 3. 通过校验插件, 添加校验功能
     $("#form").bootstrapValidator({
-  
-      // 配置图标
       feedbackIcons:    {
         valid: 'glyphicon glyphicon-ok',
         invalid: 'glyphicon glyphicon-remove',
         validating: 'glyphicon glyphicon-refresh'
       },
-  
-      // 校验的字段
       fields: {
         categoryName: {
-          // 校验规则
           validators: {
-            // 非空检验
             notEmpty: {
-              // 提示信息
               message: "请输入一级分类名称"
             }
           }
         }
       }
     })
+ $('#form').on("success.form.bv", function (e) {
+  e.preventDefault();
+  console.log(2)
+   $.ajax({
+     type:'post',
+     url:'/category/addTopCategory',
+     data:$('#form').serialize(),
+     success: function (info) {
+       if (info.success) {
+        $('#addModal').modal("hide");
+        currentPage = 1;
+        render();
+        $('#form').data("bootstrapValidator").resetForm( true );
+       }
+     }
+   })
+ })
+
+
+
 })
+
+
+

@@ -40,49 +40,64 @@
         </div>
         <div class="change">
             <ol class="dh">
-                <li><a href="">管理系统</a> / </li>
-                <li><a href=""> 分类管理</a> / </li>
-                <li><a href=""> 一级分类</a> / </li>
-                <li><a href=""> 二级分类</a></li>
+                <li><a href="javaScript:;">管理系统</a> / </li>
+                <li><a href="javaScript:;"> 分类管理</a> / </li>
+                <li><a href="javaScript:;"> 一级分类</a> / </li>
+                <li><a href="javaScript:;"> 二级分类</a></li>
             </ol>
         </div>
             <!-- 添加内容 -->
-            <button type="button" id="addBtn" class="btn btn-default ml_25" data-toggle="modal" data-target=".bs-example-modal-sm">添加分类</button>
+            <button type="button" id="addBtn" class="btn btn-default ml_25" >添加分类</button>
 
-            <div class="modal fade bs-example-modal-sm" id="addModal" >
-              <div class="modal-dialog modal-sm" >
-                <div class="modal-content">
-                        <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" ><span>&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">添加分类</h4>
-                              </div>
-                              <div class="modal-body">
-                                    <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" >
-                                                    <span id="dropdownText">请选择一级分类</span>
-                                                    <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                              <!-- <li><a href="#">户外馆</a></li>
-                                              <li><a href="#">帆布馆</a></li>
-                                              <li><a href="#">男士馆</a></li>
-                                              <li><a href="#">女士馆</a></li>
-                                              <li><a href="#">运动馆</a></li> -->
-                                            </ul>
-                                          </div>
-                                <input type="text" class="incate mt_20" placeholder="请输入二级分类">
-                                <button class="btn btn-default" type="submit">上传图片</button>
-                                <div class="image-box">
-                                    <img src="images/none.png" alt="">
-                                </div>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-primary">添加</button>
-                              </div>
+            <div class="modal fade" id="addModal">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                      <h4 class="modal-title">添加分类</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form id="form">
+                        <div class="form-group">
+                          <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                              <span id="dropdownText">请选择一级分类</span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <!-- 刨个坑 -->
+                            </ul>
+                          </div>
+                
+                          <input type="hidden" name="categoryId">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="请输入二级分类" name="brandName">
+                        </div>
+                        <div class="form-group">
+                          <label class="btn btn-default" for="fileupload">上传图片</label>
+                          <!-- 注意:
+                                  1. 指定name用于让后台获取图片, 所以不能乱写
+                                  2. 指定data-url, 指定接口地址
+                          -->
+                          <input type="file" name="pic1" data-url="/category/addSecondCategoryPic" id="fileupload" style="display: none;">
+                        </div>
+                        <div class="form-group" id="imgBox">
+                          <img src="images/none.png" width="100">
+                          <!-- 图片地址 -->
+                          <input type="hidden" name="brandLogo">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                      <!-- html5 新增 form 属性, 可以让表单外的按钮, 与表单关联起来(就相当于是写在了表单里面)-->
+                      <button type="submit" class="btn btn-primary" form="form">添加</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+              
                          <table class="table table-hover table-bordered mt_20">
                                 <thead>
                                     <tr>

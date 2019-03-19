@@ -43,6 +43,32 @@ $(function() {
         }
       });
     }
-  
+ 
+
+  $('.ds-main tbody').on('click','.btn', function () {
+    $('#userModal').modal("show");
+    var id = $(this).parent().data('id')
+    var isDelete = $(this).hasClass('btn-success') ? 1 : 0
+    $('#submitBtn').off('click').on('click', function () {
+      $.ajax({
+        type:'post',
+        url:'/user/updateUser',
+        data:{
+          id:id,
+          isDelete:isDelete
+        },
+        dataType:'json',
+        success: function (info) {
+          if (info.success) {
+            $('#userModal').modal("hide");
+            render()
+          }
+          if (info.error) {
+            alert('操作失败,请稍后尝试!')
+          }
+        }
+      })
+    })
   })
   
+})
