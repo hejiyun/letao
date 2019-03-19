@@ -1,118 +1,99 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8">
-  <title>电商前端页面</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <!-- 引入字体图标库的css -->
-  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./lib/mui/css/mui.css">
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/cart.css">
-  <link rel="icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>电商前端页面</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入字体图标库的css -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
-<!--<span class="fa fa-pause"></span>-->
-<!--<span class="mui-icon mui-icon-camera"></span>-->
+    <!--<span class="fa fa-pause"></span>-->
+    <!--<span class="mui-icon mui-icon-camera"></span>-->
 
-<div class="container">
-    <div class="ds-header">
-        <a href="index.html" class="h-left"><i class="mui-icon mui-icon-back"></i></a>
-        <h3>购物车</h3>
-     </div>
-
-
-    <!-- 添加内容 -->
+    <div class="container">
+        <div class="ds-header">
+            <a href="index.html" class="h-left"><i class="mui-icon mui-icon-back"></i></a>
+            <h3>购物车</h3>
+        </div>
 
 
-  <div class="gw-main">
-        <div class="mui-scroll-wrapper">
+        <!-- 添加内容 -->
+
+
+        <div class="gw-main">
+            <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                  <ul class="mui-table-view">
-                                <li>
-                                        <div class="gw-left"><img src="./images/product.jpg" alt=""><input type="checkbox" class="ck"></div>
-                                        <div class="gw-right">
-                                          <p>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
-                                          <p>
-                                              <span>¥499.1</span> <span>¥888.1</span>
-                                              <span class="pull-right">1双</span>
-                                          </p>
-                                          <p>鞋码: 45</p>
-                                      </div>    		
-                                </li>
-                                <li>
-                                        <div class="gw-left"><img src="./images/product.jpg" alt=""><input type="checkbox" class="ck"></div>
-                                        <div class="gw-right">
-                                          <p>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
-                                          <p>
-                                              <span>¥499.1</span> <span>¥888.1</span>
-                                              <span class="pull-right">1双</span>
-                                          </p>
-                                          <p>鞋码: 45</p>
-                                      </div>    		
-                                </li>
-                                <li>
-                                        <div class="gw-left"><img src="./images/product.jpg" alt=""><input type="checkbox" class="ck"></div>
-                                        <div class="gw-right">
-                                          <p>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
-                                          <p>
-                                              <span>¥499.1</span> <span>¥888.1</span>
-                                              <span class="pull-right">1双</span>
-                                          </p>
-                                          <p>鞋码: 45</p>
-                                      </div>    		
-                                </li>
-                          
-                  </ul>
-          
+                    <ul class="mui-table-view">
+
+                    </ul>
+
                 </div>
-              </div>
-    
-  </div>
+            </div>
 
-
-
-
-    <div class="ds-footer">
-        <ul>
-            <li>
-                <a href="index.html">
-                    <i class="fa fa-home"></i>
-                    <p>首页</p>
-                </a>
-            </li>
-            <li>
-                <a href="category.html">
-                    <i class="fa fa-bars"></i>
-                    <p>分类页</p>
-                </a>
-            </li>
-            <li>
-                <a href="cart.html" class="current">
-                    <i class="fa fa-shopping-cart"></i>
-                    <p>购物车</p>
-                </a>
-            </li>
-            <li>
-                <a href="user.html">
-                    <i class="fa fa-user"></i>
-                    <p>用户中心</p>
-                </a>
-            </li>
-        </ul>
+        </div>
+        <div class="ds-footer">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="category.html">
+                        <i class="fa fa-bars"></i>
+                        <p>分类页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html" class="current">
+                        <i class="fa fa-shopping-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class="fa fa-user"></i>
+                        <p>用户中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
+
+<script type="text/html" id="gwc">
+  {{each arr v i}}
+  <li>
+        <div class="gw-left"><img src="{{ v.pic[0].picAddr }}" alt="">
+        <input type="checkbox" class="ck"></div>
+        <div class="gw-right">
+            <p>{{v.proName}}</p>
+            <p>
+                <span>¥{{v.price}}</span> <span>¥{{v.oldPrice}}</span>
+                <span class="pull-right">{{v.num}}双</span>
+            </p>
+            <p>鞋码: {{v.size}}</p>
+        </div>
+    </li>
+  {{/each}}
+</script>
 
 
 
 
 
-
-
-<script src="./lib/zepto/zepto.min.js"></script>
-<script src="./lib/mui/js/mui.js"></script>
-<script src="./lib/artTemplate/template-web.js"></script>
-<script src="./js/common.js"></script>
-<script src="./js/cart.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
+
 </html>
