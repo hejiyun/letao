@@ -1,0 +1,47 @@
+.container .ds-header a.h-left i{
+    font-size: 24px;
+}
+.gw-main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 15px 0;
+}
+.gw-main li{
+    height: 110px;
+    padding: 10px 15px;
+    border-bottom:1px solid #ccc; 
+}
+.gw-left{
+    width: 60px;
+    height: 90px;
+    float: left;
+}
+.gw-left img {
+    width: 100%;
+    display: block;
+}
+.gw-left input {
+    width: 13px;
+    height:13px ;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    display: block;
+    /* background-color: #ccc; */
+    color:inherit;
+    border-radius:3px; 
+}
+.gw-right{
+    overflow: hidden;
+    height: 90px;
+    padding: 0 10px;
+}
+.gw-right p{
+    margin-bottom: 0;
+}
+.gw-right p:nth-child(2) span:nth-child(2){
+    text-decoration: line-through
+}
+.gw-right p:nth-child(2) span:nth-child(1){
+    color: red
+}
