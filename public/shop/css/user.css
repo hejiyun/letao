@@ -1,0 +1,25 @@
+.container .ds-header a.h-left i{
+    font-size: 24px;
+}
+.vip-main img{
+    border-radius: 50%;
+}
+.vip-main ul li a div p{
+   font-size: 17px;
+   color: black;
+}
+.vip-main ul li a div.change p{
+    font-size: 14px;
+    color: #8f8f94;
+}
+.vip-main ul li a div.change span{
+    font-size: 17px;
+}
+.btnBox{
+   padding: 10px;
+
+
+}
+#logout{
+   padding: 5px 0 ;
+}
