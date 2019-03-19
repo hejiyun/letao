@@ -1,0 +1,31 @@
+.container .ds-header a.h-left i,.container .ds-header a.h-right i{
+    font-size: 24px;
+}
+
+.container .ds-footer{
+  border-top: 1px solid  red;
+  background-color: #fff;
+  padding: 5px 10px ;
+
+}
+.container .ds-footer a{
+    display: block;
+    width: 95px;
+    height: 30px;
+    padding: 3px 0 3px 5px;
+    font-size: 17px;
+    line-height: 35px;
+    color: #007aff; 
+
+}
+.container .ds-footer button{
+    margin-top:5px 
+}
+.container .ds-footer button:nth-child(3){
+    margin-right: 5px 
+}
+.pr-main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
