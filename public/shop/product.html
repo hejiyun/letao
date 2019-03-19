@@ -39,7 +39,7 @@
     <div class="ds-footer">
        <a href="cart.html" class="pull-left">前往购物车</a>
        <button type="button" class="mui-btn mui-btn-warning pull-right">买买买</button>
-       <button type="button" class="mui-btn mui-btn-danger pull-right">加入购物车</button>
+       <button type="button" class="mui-btn mui-btn-danger pull-right" id="addcartBtn">加入购物车</button>
     </div>
 </div>
 
@@ -94,7 +94,7 @@
     
           for ( var i = start; i <= end; i++ ) {
         %>
-          <span>{{ i }}</span>
+          <span class="ch-size">{{ i }}</span>
         <% } %>
       </div>
     
@@ -106,14 +106,14 @@
 
         <div class="mui-numbox" data-numbox-min="1" data-numbox-max="{{ num }}" data-numbox-step='1'>
   
-          <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
-          <input class="mui-numbox-input" type="number" />
+          <button class="mui-btn mui-numbox-btn-minus" type="button" id="btn-minus">-</button>
+          <input class="mui-numbox-input" type="number" id="changenum">
   
-          <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+          <button class="mui-btn mui-numbox-btn-plus" type="button" id="btn-add">+</button>
         </div>
     
     
-        <span>剩余数量: {{ num }}双 </span>
+        <span >剩余数量: <span id="maxnum">{{ num }}</span>双 </span>
     
       </div>
     
