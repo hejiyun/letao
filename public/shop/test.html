@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"    content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<script>    
+    
+    //获取关键字
+    var key = getSearch('key')
+
+
+    //先获取所有数据
+    $.ajax({
+        type:'get',
+        url:'/product/queryProduct',
+         
+    })
+    
+    利用indexOf,将所有符合条件的proName的商品添加到空数组arr中, 然后 将空数组返回出来作为info进行渲染.
+    
+    
+    
+    
+    
+</script>
+</body>
+</html>
